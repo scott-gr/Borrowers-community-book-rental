@@ -32,14 +32,13 @@ class Rentmodal extends Component {
           alt={this.book.title}
           onClick={() => this.toggleModal()}
         />
-        {/* <div className="middle">
+        <div className="middle">
           <button
           className="button is-link"
           onClick={() => this.toggleModal()}
-          >
-            Rent Book
+          >Rent Book
           </button>
-        </div> */}
+        </div>
         {this.state.showModal && <RentmodalInfo user = {this.props.user} book={this.book} onClose={this.toggleModal.bind(this)} />}
       </div>
     );

@@ -1,21 +1,20 @@
-import React, { Component } from "react";
-import { searchResults } from "../../services/apiService";
-import "./AddBook.css";
-import Navbar from "../../components/Navbar/Navbar";
+import React, { Component } from 'react';
+import { searchResults } from '../../services/apiService';
+import './AddBook.css';
+import Navbar from '../../components/Navbar/Navbar';
 ///testing bookinfo component
 // import BookInfo from '../../components/BookInfo/BookInfo';
-
 
 // import axios from "axios";
 // import { saveBook } from "../../services/bookService";
 // import PropTypes from 'prop-types';
 // import Search from 'client/src/components/Search.js';
-import API from "../../utils/API.js";
+import API from '../../utils/API.js';
 // import BookInfo from '../../components/BookInfo/BookInfo';
 
 class AddBook extends Component {
   state = {
-    searchValue: "",
+    searchValue: '',
     booksSearched: [],
   };
   handleSearch = (event) => {
@@ -33,7 +32,7 @@ class AddBook extends Component {
       const image =
         value.volumeInfo.imageLinks !== undefined
           ? value.volumeInfo.imageLinks.thumbnail
-          : "https://via.placeholder.com/150/cecece/000000/?text=No+Thumbnail";
+          : 'https://via.placeholder.com/150/cecece/000000/?text=No+Thumbnail';
       const link = value.volumeInfo.link;
       const object = { authors, title, description, rating, image, link };
       console.log(object);
@@ -57,10 +56,10 @@ class AddBook extends Component {
     return (
       <div>
         <Navbar />
-        <div className="section search">
-          <div className="box" id="searchBox">
+        <div className="section">
+          <div className="container formcontainer">
             <div className="field">
-              <label className="label">Search</label>
+              <label className="label is-medium">Add books you own to your library</label>
               <div className="control has-icons-left">
                 <input
                   className="input"
@@ -75,7 +74,7 @@ class AddBook extends Component {
               </div>
             </div>
             <button
-              className="button is-inverted is-outlined"
+              className="button is-success is-outlined"
               onClick={this.handleSearchAPI}
             >
               Search
@@ -88,29 +87,23 @@ class AddBook extends Component {
             {this.state.booksSearched.map((book) => (
               <div className="section books">
                 <div className="columns">
-                  <div className="col d-flex justify-content-around">
-                    <div>{book.title}</div>
-                    <div>
-                      <button
-                        className="button is-success"
-                        onClick={() => this.saveBook(book)}
-                      >
-                        Add to Library
-                      </button>
+                  <div className="column">
+                    <div className="title">{book.title}</div>
+                    <div className="subtitle">
+                      Written By: {book.authors.join(', ')}
+                      <div>
+                        <button
+                          className="button is-success is-medium addtolibrary"
+                          onClick={() => this.saveBook(book)}
+                        >
+                          Add to Library
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div className="row">
-                  <div className="col d-flex justify-content-start">
-                    Written By: {book.authors.join(", ")}
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-sm-3">
-                    <img src={book.image} alt="bookcover" />
-                  </div>
-                  <div className="col-sm-9">{book.description}</div>
-                </div>
+                <img src={book.image} alt="bookcoveradd" />
+                <div>{book.description}</div>
               </div>
             ))}
           </div>

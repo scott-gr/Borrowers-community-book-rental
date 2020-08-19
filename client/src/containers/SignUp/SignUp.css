@@ -1,4 +1,8 @@
-.notification{
-    background-color: #c74 ;
-    background-blend-mode: lighten;
+
+.formcontainer {
+    background-color: hsl(0, 0%, 21%);
+    padding: 20px;
+    width: 75%;
+    border-radius: 10px;
+    margin-top: 100px;
 }

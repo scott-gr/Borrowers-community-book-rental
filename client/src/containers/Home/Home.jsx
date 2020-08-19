@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Home.css";
 
 const Home = () => {
@@ -7,16 +6,13 @@ const Home = () => {
     <div className="container ">
       <br></br>
       <br></br>
-      <div className="notification home">
+      <div className="notification is-dark homediv">
         <label className="label is-large">
-          
-            <i className="fas fa-book mr-2" ></i>
-          
-          The Borrowers
-        </label>
-        <p>
+          <i className="fas fa-book"></i> The Borrowers
+          </label>
+        <p className="is-light is-medium">
           Have extra books lying around and want some new material? Our site
-          allows you to post your books and borrow from your local neighbors!
+          allows you to post your books and borrow from your neighbors!
           You post your books and are able to search through books posted in
           your area. You then create a social contract with the other user
           swapping books. Once communication begins you’re ready to enjoy your
@@ -24,14 +20,8 @@ const Home = () => {
         </p>
         <br />
         <div className="buttons is-centered">
-          <Link to="/login">
-            <button className="button is-primary">Login</button>
-          </Link>
-        </div>
-        <div className="buttons is-centered">
-          <Link to="/signup">
-            <button className="button is-link">Sign up</button>
-          </Link>
+          <a className="button is-success is-medium" href="/login">Login</a>
+          <a className="button is-success is-medium is-inverted is-outlined" id="signupbutton" href="/signup">Sign up</a>
         </div>
       </div>
     </div>

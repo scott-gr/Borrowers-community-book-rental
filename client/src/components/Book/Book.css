@@ -23,9 +23,8 @@ img {
 @media screen and (max-width: 600px) {
   .bookbox, img {
     width: 80%;
-    height: auto;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    height: fit-content;
+    margin-bottom: 60%;
     z-index: 4;
 
   }
