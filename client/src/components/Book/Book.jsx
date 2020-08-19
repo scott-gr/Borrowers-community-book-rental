@@ -44,7 +44,7 @@ class Book extends Component {
             Book Info
           </button>
         </div>
-        {this.state.showModal && <BookInfo book={this.book} onClose={this.toggleModal.bind(this)} />}
+        {this.state.showModal && <BookInfo book={this.book} isRental={this.props.isRental} onClose={this.toggleModal.bind(this)} />}
       </div>
     );
   }

@@ -53,7 +53,7 @@ class Account extends Component {
             <div className="columns bookrow level">
               {this.state.ownedBooks.map((book) => (
                 <div className="bookcover level-item">
-                  <Book key={book._id} book={book} />
+                  <Book key={book._id} book={book} isRental={false}/>
                 </div>
               ))}
             </div>
@@ -79,7 +79,7 @@ class Account extends Component {
             <div className="columns borrowrow level">
               {this.state.renting.map((book) => (
                 <div className="bookcover level-item">
-                  <Book book={book} />
+                  <Book book={book} isRental={true} />
                 </div>
               ))}
             </div>
