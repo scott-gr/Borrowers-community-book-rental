@@ -24,9 +24,9 @@ Have extra books lying around and want some new material? Our site allows you to
 This project combined everything that we learned at Georgia Tech Full Stack BootCamp. We used the MERN stack, Full CRUD functionality, Google Books API, Hashing password and jwt for user information. We are using Bulma for styling and used DBdiagram.io, Sketch, and Trello to lay out the project.
 [Link to Code](https://desolate-caverns-47449.herokuapp.com/).
  
-![Web Page 1](./client/public/webpages/accountpage.png)<br>
-![Web Page 2](./client/public/webpages/addbookpage.png)<br>
-![Web Page 3](./client/public/webpages/borrowpage.png)<br>
+![Web Page 1](https://github.com/CrystalWatkins/final-project/blob/master/client/public/webpages/accountpage.png)<br>
+![Web Page 2](https://github.com/CrystalWatkins/final-project/blob/master/client/public/webpages/addbookpage.png)<br>
+![Web Page 3](https://github.com/CrystalWatkins/final-project/blob/master/client/public/webpages/borrowpage.png)<br>
 
 ## Credits
 This was our final project for the Georgia Tech, FullStack Flex Program.
